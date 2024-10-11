@@ -11,17 +11,22 @@
    do nosso background, utilizando alguma forma geometrica, por exemplo. */
   position: relative;
 
-  .header__logo-box{
+  @include respond(phone){
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); 
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); 
+  } 
+
+  &__logo-box{
     position: absolute;
     top: 4rem;
     left: 4rem;
   }
   
-  .header__logo{
+  &__logo{
     height: 3.5rem;
   }
   
-  .header__text-box{
+  &__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
